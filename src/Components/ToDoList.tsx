@@ -7,22 +7,15 @@ const ToDoList: React.FC = () => {
 		const json = localStorage.getItem("Tasks");
 		return json ? (JSON.parse(json) as Task[]) : [];
 	});
-	const [isAdding, setIsAdding] = useState(false);
 	const [draft, setDraft] = useState("");
 
 	useEffect(() => {
 		localStorage.setItem("Tasks", JSON.stringify(tasks));
 	}, [tasks]);
 
-	const handleAddClick = () => {
-		setIsAdding(true);
-		setDraft("");
-	};
-
 	const commitTask = () => {
 		if (draft.trim() === "") return;
 		setTasks([...tasks, { name: draft.trim(), isComplete: false }]);
-		setIsAdding(false);
 		setDraft("");
 	};
 
