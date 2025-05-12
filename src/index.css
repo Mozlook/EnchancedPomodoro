@@ -1,0 +1,22 @@
+@import "tailwindcss";
+@tailwind utilities;
+@custom-variant dark (&:where(.dark, .dark *));
+@theme {
+	/* Jasny motyw  */
+	--color-light-background: #f8f9f9;
+	--color-light-panel: #fefffe;
+	--color-light-accent: #d93239;
+	--color-light-text-main: #232222;
+	--color-light-text-sub: #666666;
+	--color-light-hover: #ff5252;
+	/* Ciemny motyw */
+	--color-dark-background: #272526;
+	--color-dark-panel: #171718;
+	--color-dark-accent: #ce2f34;
+	--color-dark-text-main: #fbfafb;
+	--color-dark-text-sub: #fdfcfd;
+	--color-dark-hover: #ff5252;
+
+	--box-shadow-light-card: 0 2px 4px rgba(0, 0, 0, 0.1);
+	--box-shadow-dark-card: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
