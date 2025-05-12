@@ -1,55 +1,48 @@
-# React + TypeScript + Vite
+# 🎯 EnchancedPomodoro
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+An enhanced Pomodoro application integrated with a dynamic task list and a relaxing music player powered by YouTube livestreams. Perfect for productivity, focus, and time management.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
 
-## Expanding the ESLint configuration
+- ⏱️ **Pomodoro Timer** – classic focus technique with customizable Pomodoro, short break, and long break durations
+- ✅ **To-Do List** – dynamic and editable task list
+- 🎵 **Music Player** – connected to YouTube API with curated lo-fi, ambient, and jazz radio livestreams
+- 🎨 **Settings Panel** – allows changing theme, font, music volume, and timer durations
+- 💾 **LocalStorage** – all user settings and data are stored locally in the browser
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## 🧱 Tech Stack
+
+- **React**
+- **Tailwind CSS**
+- **TypeScript**
+- **React YouTube** (`react-youtube`)
+
+---
+
+## 📁 Core Components
+
+| File                | Description                                                 |
+| ------------------- | ----------------------------------------------------------- |
+| `PomodoroTimer.tsx` | Core Pomodoro timer logic and UI                            |
+| `TodoList.tsx`      | Interactive to-do list (add/edit/remove tasks)              |
+| `SettingsPanel.tsx` | Settings interface for themes, fonts, volume, and durations |
+| `MusicPlayer.tsx`   | Integrated music controller using YouTube livestreams       |
+
+---
+
+## ▶️ Getting Started
+
+```bash
+npm install
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+The app will run locally at http://localhost:5173
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Authors
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
-# EnchancedPomodoro
+- [@Mozlook](https://www.github.com/Mozlook)
