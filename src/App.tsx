@@ -4,6 +4,7 @@ import PomodoroTimer from "./Components/PomodoroTimer.tsx";
 import ToDoList from "./Components/ToDoList.tsx";
 import SettingsPanel from "./Components/SettingsPanel.tsx";
 import MusicPlayer from "./Components/MusicPlayer.tsx";
+import ClassHolder from "./Components/ClassHolder.tsx";
 interface Timers {
 	Pomodoro: number;
 	Break: number;
@@ -134,6 +135,7 @@ const Pomodoro: React.FC = () => {
 					setVolume={setVolume}
 				/>
 				<MusicPlayer volume={volume} />
+				<ClassHolder />
 			</main>
 		</div>
 	);
