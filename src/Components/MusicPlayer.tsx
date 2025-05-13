@@ -13,7 +13,7 @@ import YouTube, { YouTubePlayer } from "react-youtube";
 import { streams } from "./streams.ts";
 
 const MusicPlayer: React.FC<MusicPlayerProps> = ({ volume }) => {
-	const [isPlaying, setIsPlaying] = useState(true);
+	const [isPlaying, setIsPlaying] = useState(false);
 	const playerRef = useRef<YouTubePlayer | null>(null);
 	const [currentStream, setCurrentStream] = useState<number>(0);
 
@@ -40,7 +40,7 @@ const MusicPlayer: React.FC<MusicPlayerProps> = ({ volume }) => {
 
 	const onPlayerReady = (event: any) => {
 		playerRef.current = event.target;
-		playerRef.current.setVolume(volume); // <- tu natychmiastowe ustawienie głośności
+		playerRef.current.setVolume(volume);
 		if (isPlaying) {
 			playerRef.current.playVideo();
 		}
@@ -59,6 +59,7 @@ const MusicPlayer: React.FC<MusicPlayerProps> = ({ volume }) => {
 					width: "0",
 					playerVars: {
 						autoplay: 1,
+						mute: 0,
 					},
 				}}
 				onReady={onPlayerReady}
